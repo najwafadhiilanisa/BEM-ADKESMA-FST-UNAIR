@@ -1,6 +1,6 @@
-# BEM FST UNAIR Link Hub
+# BEM FST ADKESMA UNAIR Link Hub
 
-Website statis sederhana yang berfungsi sebagai pusat tautan penting untuk **BEM FST Universitas Airlangga**. Halaman ini dirancang agar pengunjung bisa mengakses berbagai platform dan formulir dengan cepat melalui tampilan yang ringkas, responsif, dan modern.
+Website statis sederhana yang berfungsi sebagai pusat tautan penting untuk **BEM FST ADKESMA Universitas Airlangga**. Halaman ini dirancang agar pengunjung bisa mengakses berbagai platform dan formulir dengan cepat melalui tampilan yang ringkas, responsif, dan modern.
 
 ## Fitur
 
