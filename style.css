@@ -1,16 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap');
 
 :root {
-  --c-bg:        #0B1120;
-  --c-surface:   #111B2E;
-  --c-surface-2: #162036;
-  --c-border:    #1E2D4A;
-  --c-text:      #E8ECF4;
-  --c-text-muted:#8898B5;
-  --c-accent:    #D4A853;
-  --c-accent-dim:#9E7B3A;
-  --c-hover-bg:  #1A2740;
-  --c-card-glow: rgba(212, 168, 83, 0.06);
+  --c-bg:        #061326;
+  --c-bg-deep:   #0a1f44;
+  --c-surface:   rgba(10, 31, 68, 0.68);
+  --c-surface-2: rgba(30, 64, 175, 0.18);
+  --c-border:    rgba(125, 211, 252, 0.2);
+  --c-text:      #eff6ff;
+  --c-text-muted:#bfd4f5;
+  --c-accent:    #7dd3fc;
+  --c-accent-dim:#38bdf8;
+  --c-hover-bg:  rgba(19, 58, 130, 0.9);
+  --c-card-glow: rgba(56, 189, 248, 0.16);
 
   --f-display: 'Space Grotesk', sans-serif;
   --f-body:    'DM Sans', sans-serif;
@@ -41,7 +42,8 @@ html {
 
 body {
   font-family: var(--f-body);
-  background: var(--c-bg);
+  background:
+    linear-gradient(145deg, #03101f 0%, #0a2a5e 45%, #0f4c81 100%);
   color: var(--c-text);
   min-height: 100vh;
   display: flex;
@@ -56,8 +58,9 @@ body::before {
   position: fixed;
   inset: 0;
   background:
-    radial-gradient(ellipse 600px 400px at 50% 0%, rgba(212, 168, 83, 0.04), transparent),
-    radial-gradient(ellipse 400px 600px at 80% 100%, rgba(30, 45, 74, 0.3), transparent);
+    radial-gradient(circle at top left, rgba(125, 211, 252, 0.24), transparent 35%),
+    radial-gradient(circle at top right, rgba(59, 130, 246, 0.26), transparent 30%),
+    radial-gradient(circle at bottom center, rgba(14, 116, 144, 0.28), transparent 42%);
   pointer-events: none;
   z-index: 0;
 }
@@ -81,6 +84,7 @@ body::after {
   max-width: 480px;
   padding: var(--s-4) var(--s-3);
   padding-bottom: var(--s-8);
+  backdrop-filter: blur(4px);
 }
 
 /* --- Header --- */
@@ -191,7 +195,8 @@ body::after {
   align-items: center;
   gap: var(--s-3);
   padding: var(--s-3);
-  background: var(--c-surface);
+  background:
+    linear-gradient(180deg, rgba(13, 37, 84, 0.78), rgba(9, 24, 53, 0.9));
   border: 1px solid var(--c-border);
   border-radius: 12px;
   text-decoration: none;
@@ -203,6 +208,7 @@ body::after {
     border-color 0.3s ease,
     box-shadow 0.35s var(--ease-out);
   overflow: hidden;
+  box-shadow: 0 14px 34px rgba(3, 10, 26, 0.28);
 }
 
 /* Left accent bar */
@@ -214,7 +220,7 @@ body::after {
   transform: translateY(-50%);
   width: 3px;
   height: 0%;
-  background: var(--c-accent);
+  background: linear-gradient(180deg, #7dd3fc, #2563eb);
   border-radius: 0 4px 4px 0;
   transition: height 0.35s var(--ease-out);
 }
@@ -222,11 +228,13 @@ body::after {
 .hub__link:hover,
 .hub__link:focus-visible {
   transform: translateY(-2px);
-  background: var(--c-hover-bg);
-  border-color: var(--c-accent-dim);
+  background:
+    linear-gradient(180deg, rgba(21, 65, 146, 0.92), rgba(11, 32, 73, 0.96));
+  border-color: rgba(125, 211, 252, 0.42);
   box-shadow:
-    0 4px 20px rgba(0, 0, 0, 0.3),
-    0 0 0 1px rgba(212, 168, 83, 0.08);
+    0 16px 36px rgba(2, 8, 23, 0.32),
+    0 0 0 1px rgba(125, 211, 252, 0.1),
+    0 0 30px var(--c-card-glow);
 }
 
 .hub__link:hover::before,
@@ -255,8 +263,8 @@ body::after {
 }
 
 .hub__link:hover .hub__link-icon {
-  background: rgba(212, 168, 83, 0.08);
-  border-color: var(--c-accent-dim);
+  background: rgba(125, 211, 252, 0.12);
+  border-color: rgba(125, 211, 252, 0.35);
 }
 
 /* Link Text */
